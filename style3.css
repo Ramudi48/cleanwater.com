@@ -1,0 +1,32 @@
+h2{
+    text-align: center;
+    overflow: hidden;
+    position: fixed; 
+    top: 0;
+    width: 98%;
+    padding: 8px;
+    background-color:lightpink;
+}
+p{
+    text-align: center;
+}
+img{
+    width: 25px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed; 
+    width:97%;
+    padding:  1%;
+    background-color:lightpink;
+    padding-right: 10px;
+}
+.content p {
+    text-align: center;
+}
+h4{
+    text-align: center;
+}

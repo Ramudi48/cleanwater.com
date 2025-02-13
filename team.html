@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team page</title>
+    <link rel="stylesheet" href="st3.css">
+    <style>
+        #team-container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:1rem;
+            min-height: 100vh;
+        }
+        .team-member{
+            width:250px;
+
+
+        }
+        
+        img{
+         width: 100% ;
+         height  :300px;
+         object-fit: cover;
+
+
+        }
+        .member-details{
+            display:none;
+            background-color:lightgray ;
+            padding: 5px;
+            
+        }
+        img:hover{
+            opacity: 0.7;
+        }
+        #student1-img:hover + #student1{
+            display: block;
+        }
+        #student2-img:hover + #student2{
+            display: block;
+        }
+        #student3-img:hover + #student3{
+            display: block;
+        }
+        #student4-img:hover + #student4{
+            display: block;
+        }
+        .name{
+            text-align: center;
+            
+        }
+        h1{
+            text-align: center;
+        }
+        h3{
+            text-align: center;
+        }    
+        #footer {
+        padding: 1rem;
+        background-color: rgb(0, 22, 57);
+        color: white;
+        text-align: center;
+        
+      }
+        
+
+        
+            
+        
+     
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+          <li class="logo"><img src="logo.png" alt="Logo" /></li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="profile.html">User Profile</a></li>
+          <li><a href="form.html">Feedback</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </nav>
+    <h1> Student Details </h1>
+    <h3> About Us- Hover over the images for details! </h3>
+    <div id="team-container"> 
+        <div class="team-member">
+            <img id="student1-img" src="./img/paveena.jpg" alt="Paveena Peiris">
+            <div id="student1" class="member-details">
+                <div class="name"> <b> Paveena Peiris</b> </div>
+                <p> Role: student 1<br>
+                    Design and implemented pages:<br>
+                    Splash Screen | Shop
+                </p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img id="student2-img"src="img/dilshan.jpg" alt="Dilshan Manohara">
+            <div id="student2" class="member-details">
+                <div class="name"> <b> Dilshan Manohara</b> </div>
+                <p> Role: student 2<br>
+                    Design and implemented pages:<br>
+                    Home page+Templete+Nav | Feedback
+                </p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img id="student3-img" src="./img/anu.jpg" alt="Tharushi Jayasooriya">
+            <div id="student3" class="member-details">
+                <div class="name"> <b> Tharushi Jayasooriya</b> </div>
+                <p>Role: Student 3<br>
+                   Design and implemented pages:<br>
+                   User profile | Team 
+                </p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img id="student4-img" src="./img/ramu.jpg" alt="Ramudi Munasinghe">
+            <div id="student4" class="member-details">
+                <div class="name"> <b>Ramudi Munasinghe</b> </div>
+                <p>Role: Student 4<br>
+                   Design and implemented pages:<br>
+                   Gallery | Sitemap
+                </p>
+            </div>
+
+                         
+        </div>
+    </div>
+    <section id="footer">
+        <p>
+          Click here to redirect to
+          <a href="./page-editor.html" target="_blank">Page Editor</a>
+        </p>
+      </section>
+</body>
+</html>

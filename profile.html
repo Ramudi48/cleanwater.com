@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gathering user information</title>
+    <link rel="stylesheet" href="st3.css">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-image: url("https://images.pexels.com/photos/40784/drops-of-water-water-nature-liquid-40784.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      main {
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+      #profile-wrapper {
+        min-width: 370px;
+        margin-top: 10px;
+      }
+
+      button {
+        background-color: rgba(255, 255, 255, 0.998);
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: rgb(0, 0, 0);
+        color: bisque;
+      }
+      .progress-container {
+        margin-top: 20px;
+      }
+
+      .progress {
+        position: relative;
+        width: 100%;
+        height: 30px;
+        background: #9cbab4;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-top: 10px;
+      }
+
+      .progress__fill {
+        width: 0%;
+        height: 100%;
+        background: #009579;
+        transition: all 0.2s;
+      }
+
+      .progress__text {
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        transform: translateY(-50%);
+        font: bold 14px "Quicksand", sans-serif;
+        color: #ffffff;
+      }
+
+      #profile-container {
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.418);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(20px);
+      }
+
+      #profile-details {
+        text-align: start;
+      }
+      #profile-details p {
+        margin-block: 0.5rem;
+      }
+
+      .btn-wrapper {
+        display: flex;
+        justify-content: center;
+      }
+
+      .btn-wrapper button {
+        margin-right: 1rem;
+      }
+
+      #step-container {
+        text-align: center;
+      }
+
+      #skip-btn,
+      #previous-btn {
+        display: none;
+      }
+      h1 {
+        text-align: center;
+        color: black;
+      }
+
+      #footer {
+        padding: 1rem;
+        background-color: rgb(0, 22, 57);
+        color: white;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li class="logo"><img src="logo.png" alt="Logo" /></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="profile.html">User Profile</a></li>
+        <li><a href="form.html">Feedback</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div id="profile-wrapper">
+        <h1>User Profile</h1>
+        <div id="profile-container">
+          <div id="profile-form">
+            <p id="step-container"></p>
+            <div class="btn-wrapper">
+              <button id="next-btn" onclick="handleNextBtn()">Start</button>
+              <button id="previous-btn" onclick="handlePreviousBtn()">
+                Previous
+              </button>
+              <button id="skip-btn" onclick="handleSkipBtn()">Skip</button>
+            </div>
+          </div>
+          <div class="progress-container">
+            <div class="progress">
+              <div class="progress__fill"></div>
+              <span class="progress__text">0%</span>
+            </div>
+          </div>
+          <div id="profile-details"></div>
+        </div>
+      </div>
+    </main>
+
+    <section id="footer">
+      <p>
+        Click here to redirect to
+        <a href="./page-editor.html" target="_blank">Page Editor</a>
+      </p>
+    </section>
+    <script>
+      let currentCategoryIndex = 0;
+      let currentQuestionIndex = 0;
+      const categories = [
+        {
+          name: "Personal Details",
+          questions: [
+            "Enter your name",
+            "Enter your surname",
+            "Enter your age",
+            "Enter your gender",
+            "Do you agree with the privacy terms?",
+          ],
+        },
+        {
+          name: "Volunteering tasks",
+          questions: [
+            "What brings you here",
+            "How do you prefer to contact with us?",
+            "How are you willing to contribute?",
+            "Where is your residence?",
+            "Preferred field of conducting assignments?",
+          ],
+        },
+        {
+          name: "Qualifications",
+          questions: [
+            "What field are you study in?",
+            "Your best excelled degree title?",
+            "What is your university/institution?",
+            "What is your completition year?",
+            "What is your country?",
+          ],
+        },
+        {
+          name: "Availability and contact",
+          questions: [
+            "Availability for volunteering",
+            "Enter your surname ",
+            "Enter your contact number",
+            "Enter your e-mail",
+          ],
+        },
+      ];
+      let userDetails = {};
+      let started = false;
+
+      function updateStepContainer() {
+        if (started) {
+          document.getElementById("previous-btn").style.display = "block";
+        }
+
+        if (!started) {
+          document.getElementById("next-btn").textContent = "Next";
+          document.getElementById("skip-btn").style.display = "block";
+          started = true;
+        }
+
+        if (currentCategoryIndex >= categories.length) {
+          document.getElementById("next-btn").style.display = "none";
+          document.getElementById("skip-btn").style.display = "none";
+          return;
+        } else {
+          document.getElementById("next-btn").style.display = "block";
+          document.getElementById("skip-btn").style.display = "block";
+        }
+
+        const currentCategory = categories[currentCategoryIndex];
+        const currentQuestion = currentCategory.questions[currentQuestionIndex];
+        const stepContainer = document.getElementById("step-container");
+        console.log(currentCategoryIndex + 1);
+        stepContainer.textContent = `Step ${currentCategoryIndex + 1} ${
+          currentCategory.name
+        } | Question ${currentQuestionIndex + 1}/${
+          currentCategory.questions.length
+        }`;
+        return;
+      }
+
+      function nextPrompt() {
+        const currentCategory = categories[currentCategoryIndex];
+        const currentQuestion = currentCategory.questions[currentQuestionIndex];
+
+        const userInput = prompt(currentQuestion);
+        if (userInput !== null) {
+          userDetails[currentQuestion] = userInput;
+          currentQuestionIndex++;
+          if (currentQuestionIndex >= currentCategory.questions.length) {
+            currentCategoryIndex++;
+            currentQuestionIndex = 0;
+          }
+          updateProfileDetails();
+        }
+
+        console.log(currentCategoryIndex, currentQuestionIndex);
+
+        const progressBar = document.querySelector(".progress");
+
+        updateProgressBar(progressBar, currentCategoryIndex * 25);
+      }
+
+      function handleNextBtn() {
+        updateStepContainer();
+        setTimeout(() => {
+          nextPrompt();
+        }, 30);
+      }
+
+      function previousPrompt() {
+        const currentCategory = categories[currentCategoryIndex];
+        const currentQuestion = currentCategory.questions[currentQuestionIndex];
+
+        const userInput = prompt(currentQuestion);
+        if (userInput !== null) {
+          userDetails[currentQuestion] = userInput;
+
+          updateProfileDetails();
+        }
+
+        console.log(currentCategoryIndex, currentQuestionIndex);
+
+        const progressBar = document.querySelector(".progress");
+
+        updateProgressBar(progressBar, currentCategoryIndex * 25);
+      }
+
+      function handlePreviousBtn() {
+        if (currentQuestionIndex <= 0) {
+          currentCategoryIndex = currentCategoryIndex - 1;
+          currentQuestionIndex =
+            categories[currentCategoryIndex].questions.length;
+        }
+        currentQuestionIndex = currentQuestionIndex - 1;
+
+        updateStepContainer();
+        if (currentCategoryIndex <= 0 && currentQuestionIndex <= 0) {
+          document.getElementById("previous-btn").style.display = "none";
+        } else {
+          document.getElementById("previous-btn").style.display = "block";
+        }
+        setTimeout(() => {
+          previousPrompt();
+        }, 30);
+      }
+
+      function skipPrompt() {
+        const currentCategory = categories[currentCategoryIndex];
+        const currentQuestion = currentCategory.questions[currentQuestionIndex];
+        if (userDetails[currentQuestion] == null) {
+          userDetails[currentQuestion] = "(Skipped)";
+        }
+
+        currentQuestionIndex++;
+
+        if (currentQuestionIndex >= currentCategory.questions.length) {
+          currentCategoryIndex++;
+          currentQuestionIndex = 0;
+        }
+
+        updateProfileDetails();
+      }
+
+      function handleSkipBtn() {
+        skipPrompt();
+
+        updateStepContainer();
+      }
+
+      function updateProgressBar(progressBar, value) {
+        value = Math.round(value);
+        progressBar.querySelector(".progress__fill").style.width = `${value}%`;
+        progressBar.querySelector(".progress__text").textContent = `${value}%`;
+        if (value == 100) {
+          document.querySelector("btn-wrapper").style.display = "none";
+        }
+      }
+
+      function updateProfileDetails() {
+        const profileDetailsDiv = document.getElementById("profile-details");
+        profileDetailsDiv.innerHTML = "";
+
+        let count = 0;
+        Object.keys(userDetails).forEach((key) => {
+          const detail = document.createElement("p");
+          detail.textContent = `${key}: ${userDetails[key]}`;
+          profileDetailsDiv.appendChild(detail);
+          count++;
+          if (count % 5 === 0) {
+            profileDetailsDiv.appendChild(document.createElement("hr"));
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

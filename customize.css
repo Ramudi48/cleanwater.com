@@ -1,0 +1,152 @@
+   
+.details{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: -50px;
+}
+
+.img-gallery{
+    text-align: left;
+}
+button:hover{
+    cursor: pointer;
+    transform: scaleY(1.5);
+}
+    
+#galleryInfo{
+    padding-top: 7%;
+}
+
+
+.fontButton:hover{
+    background-color: rgb(174, 119, 225);
+}
+.hidden{
+    display: none;
+    position: fixed;
+    right: 7.5%;
+    top: 150px;
+    width: 80%;   
+    height: 450px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: #033d76;
+    color: rgb(246, 242, 242);
+    border-radius: 10px;
+}
+#fontFam{
+    position: fixed;
+    bottom: 1%;
+    right: 10px;
+}
+
+#fontLabel{
+    position: fixed;
+    bottom: 1%;
+    right: 150px;
+    color: white;
+}
+
+#fontSizeLabel{
+    position: fixed;
+    bottom: 1%;
+    right: 450px;
+    color: white;
+}
+#fontSize{
+    position: fixed;
+    bottom: 1%;
+    right: 360px;
+}
+
+
+.fontButton{
+    position: fixed;
+    top: 10px;
+    
+}
+
+.close{
+    cursor: pointer;
+    margin-left: 25px;
+    font-size: x-large;
+}
+#thePage{
+    background-image: url(images/background.jpeg);
+    background-size: cover;
+}
+#sitemapBody{
+    background-image: url(images/map.jpeg);
+    background-size: cover;
+}
+
+.img-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin:2% auto 2% ;
+    
+}
+.img-container{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.img-gallery img{
+    width:250px;
+    height: 400px;
+    transition: 1s;
+}
+summary:hover{
+    cursor: pointer;
+}
+
+.img-gallery img:hover{
+    transform:  scale(1.2);
+    border-radius: 20px;
+    box-shadow: khaki;
+    cursor: pointer;
+}
+.center{
+    text-align: center;
+   /* font: 2cm sans-serif;*/
+   font-size:xx-large;
+
+}
+
+button{
+border-radius: 10px;
+}
+
+
+    .link {
+        fill: none;
+        stroke: rgba(255, 255, 255, 0.89);
+        stroke-width: 2;
+        marker-end: url(#arrowhead);
+    }
+    .link:hover {
+        stroke: red;
+    }
+    .page-link {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        fill: black;
+    }
+    .page-link:hover {
+        text-decoration: underline;
+    }
+    .page-box {
+        fill: rgb(255, 255, 255);
+        stroke: rgb(255, 255, 255);
+        stroke-width: 8;
+    }
+
+    #sitemapH{
+        color: antiquewhite;
+        text-align: center;
+    }
+

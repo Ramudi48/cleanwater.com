@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback </title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    
+    <div class="form-container">
+        <h2>Feedback Form</h2>
+        <h3>Required fields*</h3>
+        <div class="form">
+            <form id="feedbackForm"  onsubmit="return validateForm()">
+                <label for="name">*Enter your name:</label>
+                <input type="text"id="name" name="name"  placeholder="Enter name here"><br>
+
+                <label for="email">*Enter your email:</label>
+                <input type="email"id="email" name="mail" placeholder="Enter email here"><br>
+
+                <label for="time-visited">Was this your first time visiting?</label><br>
+                <label for="time-visited_yes">Yes</label>
+                <input type="radio" id="time-visited_yes" name="time-visited" value="yes" >
+                <label for="time-visited_no">No</label>
+                <input type="radio" id="time-visited_no" name="time-visited" value="no"><br>
+
+                <label for="navigation">Was this website informative and easy to navigate through?</label><br>
+                <label for="navigation_yes">Yes</label>
+                <input type="radio" id="navigation_yes" name="navigation" value="yes" >
+                <label for="navigation_no">No</label>
+                <input type="radio" id="navigation_no" name="navigation" value="no"><br>
+
+
+                <label for="additional_comment">*If "No",suggest any improvements for the future:</label><br>
+                <textarea id="additional_comment" name="additional_comment"placeholder="Add your message here..."></textarea><br>
+
+                <div class="rating">
+                    <label for="rating">How satisfied are you with our services?choose from 0 to 10,
+                        with 1 being "satisfied at all!" and 10 being "Extremely satisfied!"</label><br>
+                    <input type="radio" id="rating_0" name="rating" value="0">
+                    <label for="rating_1">0</label>
+                    <input type="radio" id="rating_1" name="rating" value="1">
+                    <label for="rating_1">1</label>
+                    <input type="radio" id="rating_2" name="rating" value="2">
+                    <label for="rating_2">2</label>
+                    <input type="radio" id="rating_3" name="rating" value="3">
+                    <label for="rating_3">3</label>
+                    <input type="radio" id="rating_4" name="rating" value="4">
+                    <label for="rating_4">4</label>
+                    <input type="radio" id="rating_5" name="rating" value="5">
+                    <label for="rating_5">5</label>
+                    <input type="radio" id="rating_6" name="rating" value="6">
+                    <label for="rating_6">6</label>
+                    <input type="radio" id="rating_7" name="rating" value="7">
+                    <label for="rating_7">7</label>
+                    <input type="radio" id="rating_8" name="rating" value="8">
+                    <label for="rating_8">8</label>
+                    <input type="radio" id="rating_9" name="rating" value="9">
+                    <label for="rating_9">9</label>
+                    <input type="radio" id="rating_10" name="rating" value="10">
+                    <label for="rating_10">10</label><br>
+                </div>
+
+
+             <label for="recommend">Would you recommend our services?</label><br>
+                <label for="recommend_yes">Yes</label>
+                <input type="radio" id="recommend_yes" name="recommend" value="yes" >
+                <label for="recommend_no">No</label>
+                <input type="radio" id="recommend_no" name="recommend" value="no"><br>
+
+                
+              <label for="sendMailPrompt">Would you like to receive updates about the website and any offers?</label><br>
+              <select id="sendMailPrompt" name="sendMailPrompt" placeholder="send a mail">
+                <option>via email</option>
+                <option>via sms</option>
+              </select><br>
+                
+
+
+             <label for="additional_question">Do you have any additional questions or requests?</label><br>
+             <textarea id="additional_question" name="additional_question" placeholder="Add your message here..."></textarea><br>
+
+
+             <input type="submit" value="Submit">
+
+          </form>
+          
+         
+       </div>
+    </div>
+    <script>
+        function validateForm() {
+            var name = document.forms["feedbackForm"]["name"].value;
+            var email = document.forms["feedbackForm"]["email"].value;
+            if (name == "" || email == "") {
+                alert("Name and email must be filled out");
+                return false;
+            }
+            if (!email.includes('@')) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+        }
+
+
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+        
+        // Display alert
+        alert('Form submitted successfully!');
+    });
+        </script> 
+    
+
+    
+</body>
+</html>

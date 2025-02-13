@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div id="top">
+    <title >GALLERY</title></div>
+    <link rel = "stylesheet"  href="customize.css">
+ 
+</head>
+
+<body for="theme" id="thePage">
+    <link rel="stylesheet" href="nav.css">
+    <nav>
+        <ul>
+          <li class="logo"><img src="images/logo.png" alt="Logo" /></li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="profile.html">User Profile</a></li>
+          <li><a href="form.html">Feedback</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </nav>
+      <div id="galleryInfo">
+    <button onclick="dark()" style="background-color: black; color: bisque;">Dark theme</button>
+    <button onclick="light()" >Default theme</button>
+    
+    <h1 class = "center"> GALLERY</h1>
+
+   
+    <div class="img-gallery">
+        <div class="img-gallery">
+            <div class="img-container">
+                <img src="images/img1.jpg" alt="img1" onclick="showPopup('water1')">
+                
+            </div>
+            
+        </div>
+        <div class="img-gallery">
+            <div class="img-container">
+                <img src="images/img2.jpg" alt="img2" onclick="showPopup('water2')">
+               
+            </div>
+            
+        </div>
+        
+        <div class="img-gallery">
+            <div class="img-container">
+                <img src="images/img3.jpg" alt="img3" onclick="showPopup('water3')">
+                
+            </div>
+            
+        </div>
+        <div class="img-gallery">
+            <div class="img-container">
+                <img src="images/img4.jpg" alt="img4" onclick="showPopup('water4')">
+                
+            </div>
+            
+        </div>
+        <div class="img-gallery">
+            <div class="img-container">
+                <img src="images/img5.jpg" alt="img5" onclick="showPopup('water5')">
+                
+            </div>
+            
+        </div>
+        <div class="img-gallery">
+            <div class="img-container">
+               <img src="images/img6.jpg" alt="img6" onclick="showPopup('water6')">
+                
+            </div>
+        </div>
+
+        <div class="img-gallery">
+            <div class="img-container">
+                <img src="images/img7.jpg" alt="img6" onclick="showPopup('water7')">
+                
+            </div>
+        </div>
+
+        <div class="img-gallery">
+            <div class="img-container">
+                <img src="images/img8.jpg" alt="img6" onclick="showPopup('water8')">
+                
+            </div>
+        </div>
+        </div>
+        <div id="labels">
+        <label for="fontFam" id="fontLabel">Select Font: </label>
+        <select list="fontFam" name="fonts" id="fontFam" onchange="fontChanged()">
+            <option value="Arial" id="arialF">Arial Font</option>
+            <option value="Monospace" id="monospaceF">Monospace Font</option>
+            <option value="Segoe" id="segoeF">Segoe Font</option>
+            </select>
+
+            <label for="fontSize" id="fontSizeLabel">Select Size: </label>
+            <select list="fontFam" name="fonts" id="fontSize" onchange="fontSizeChanged()">
+                <option value="small" >Small</option>
+                <option value="medium" >Medium</option>
+                <option value="large" >Large </option>
+                </select>
+
+            </div>
+        <div id="water1" class="hidden">
+            <span class="close" style="font-size: xx-large;" onclick="hidePopup('water1')">&times;</span>
+            
+            <p class="details"> <span style="font-size: x-large;"><b>Clean water sources</b></span><br><br>
+                Clean water sources are critical to the survival of life on Earth because they supply 
+                necessary resources for agriculture, human use, and ecological equilibrium. These sources 
+                include rainfall collected through collection devices, groundwater stored in waterways, 
+                desalinated seawater, protected springs, wetlands, snowfall in mountains, and surface water 
+                bodies like rivers and lakes. Even while every source has its own advantages, all of them need 
+                to be maintained carefully and maintained free from disease to be sustainable and available to 
+                future generations. Protecting these sources and using ethical water management techniques is 
+                essential for preserving clean water resources and advancing the health and welfare of people 
+                everywhere.</p>
+        </div>
+        <div id="water2" class="hidden">
+            <span class="close" style="font-size: xx-large;" onclick="hidePopup('water2')">&times;</span>
+
+            <p class="details"> <span style="font-size: x-large;"><b> Sanitation Facilities</b></span><br><br>
+                Water sanitation facilities comprise a variety of technologies and systems intended to safely 
+                handle human waste and keep it from poisoning water sources. Septic tanks, sewage treatment plants, 
+                restrooms, and other sanitation infrastructure are examples of these facilities. Maintaining
+                public health and preventing waterborne illnesses depend on having proper sanitation buildings.
+                Diseases including cholera, dysentery, and typhoid fever can spread as a result of poor sanitation,
+                especially in areas where access to clean water and sanitary facilities is scarce. Consequently,
+                making investments in efficient sanitation infrastructure is vital for maintaining the 
+                availability of clean water and raising global hygiene standards.</p>
+        </div>
+        <div id="water3" class="hidden">
+            <span class="close" style="font-size: xx-large;" onclick="hidePopup('water3')">&times;</span>
+
+            <p class="details"> <span style="font-size: x-large;"><b> People Accessing Clean Water</b></span><br><br>
+                A basic human right and an essential need for the health and welfare of the general public is 
+                access to clean water. Millions of people around the world still do not have consistent access 
+                to clean drinking water, nevertheless. Water access is significantly influenced by variables like 
+                location, financial status, and infrastructure development. Communities in rural locations may 
+                depend on far-off water supplies or tainted wells, which can result in health problems related to 
+                drinking water and financial difficulties. Disparities in access are exacerbated in urban areas by 
+                issues with old buildings and limited service coverage. A multimodal solution is needed to address 
+                this problem, one that includes community involvement, improved governance, capital spending, and 
+                sustainable water management techniques. .</p>
+        </div>
+        <div id="water4" class="hidden">
+            <span class="close" style="font-size: xx-large;" onclick="hidePopup('water4')">&times;</span>
+
+            <p class="details"> <span style="font-size: x-large;"><b> Hygiene Practices</b></span><br><br>
+                The public's health and avoid the possibility of waterborne illnesses depend heavily on hygiene habits.
+                These include disposing of waste properly, making drinking water safe to store, and washing hands 
+                effectively. Handwashing stops the spread of germs both before and after using the restroom. A lack 
+                of proper sanitation facilities guards against diseases like cholera and diarrhea that may enter water.
+                Good hygiene practices are also aided by community-wide initiatives like clean water initiatives, 
+                sanitation building, and hygiene education. Communities can safeguard their health, lower the number of
+                waterborne infections, and enhance general wellbeing by encouraging proper hygiene.</p>
+        </div>
+        <div id="water5" class="hidden">
+            <span class="close" style="font-size: xx-large;" onclick="hidePopup('water5')">&times;</span>
+
+            <p class="details"><span style="font-size: x-large;"><b> Community Engagement </b></span><br><br>
+                Involving local communities in choices and activities relevant to water resources, encouraging
+                collaboration, and safeguarding sustainable practices are all part of local involvement in water 
+                management. Public events workshops,democratic decision-making procedures,and campaigns for education
+                can all help achieve this.Engaging community members into the development,execution,and oversight
+                of water projects provides participants with invaluable knowledge and reinforcement of sustainable
+                practices. Community engagement cultivates a sense of ownership and responsibility among communities,
+                which in turn increases resilience to difficulties relatedto water. In general,community involvement 
+                fosters resilient communities, improves environmental stewardship, and provides fair access to water.
+            </p>
+        </div>
+
+        <div id="water6" class="hidden">
+            <span class="close" style="font-size: xx-large;" onclick="hidePopup('water6')">&times;</span>
+
+            <p class="details"><span style="font-size: x-large;"><b>Climate Change and Water</b></span><br><br>
+                The dynamics of the world's water systems are drastically altered by climate change, which also 
+                causes existing weaknesses. Elevated global temperatures cause disturbances to precipitation 
+                patterns, resulting in increased frequency and severity of droughts in certain areas and higher
+                precipitation and flooding in other locations. Sea level rise and glacial melt put further 
+                strain on freshwater supplies and endanger coastal towns. These changes have far-reaching effects 
+                on human health, biodiversity, and agriculture. To address the relationship between climate change 
+                and water, immediate and collective action is needed. This includes mitigation measures to reduce 
+                greenhouse gas emissions and methods of adaptation to deal with the impact. </p>
+        </div>
+
+        <div id="water7" class="hidden">
+            <span class="close" style="font-size: xx-large;" onclick="hidePopup('water7')">&times;</span>
+
+            <p class="details"> <span style="font-size: x-large;"><b> Water Pollution</b></span><br><br>
+                The term "water pollution" describes the entry of dangerous materials or chemicals into bodies of water, 
+                including lakes, rivers, seas, and groundwater. Chemicals, sewage, industrial waste, plastics, and 
+                agricultural runoff are a few examples of these chemicals. Human health, wildlife, and the environment can 
+                all suffer from water pollution. It may cause drinking water sources to become tainted fish populations 
+                decline, habitats to be destroyed, and diseases to spread. Comprehensive approaches are needed for fighting 
+                water pollution, including better waste management, stronger rules for industrial discharges, and programs to 
+                encourage sustainable farming methods and cut down on plastic waste.</p>
+
+        </div>
+
+        <div id="water8" class="hidden">
+            <span class="close" style="font-size: xx-large;" onclick="hidePopup('water8')">&times;</span>
+
+            <p class="details"><span style="font-size: x-large;"><b> Global Context</b></span><br><br>
+                Global issues changing public health, economic growth, and environmental sustainability 
+                include access to clean water and sanitation. The lack of sanitary facilities and suitable 
+                drinking water for millions of people causes environmental degradation, economic pain, and 
+                waterborne illnesses. Given its relationship with other development goals, the United Nations 
+                Sustainable Development Goal 6 seeks to provide access by 2030. Building infrastructure, 
+                educating the public, developing capacity, and executing sustainable water management 
+                techniques are all necessary to achieve universal access. Making water and sanitation a top
+                priority on the global agenda will improve people's quality of life and advance sustainable 
+                development globally.</p>
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+    const thePage = document.getElementById('thePage')
+    const paras = document.getElementsByTagName('p')
+    const newpage=document.getElementsByClassName("center")
+    function dark(){
+        thePage.style.backgroundImage = 'url(images/backgroundDark.jpeg)'
+        thePage.style.backgroundSize = 'cover'
+        thePage.style.color = 'white'
+      
+    }
+    function light(){
+        thePage.style.backgroundImage = 'url(images/background.jpeg)'
+        thePage.style.backgroundSize = 'cover'
+        thePage.style.color = 'black'
+    }
+
+    function segoe(){
+        thePage.style.fontFamily = 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif'
+        paras.style.fontFamily = 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif'
+
+    }
+    function arial(){
+        thePage.style.fontFamily = 'Arial, Helvetica, sans-serif'
+        paras.style.fontFamily = 'Arial, Helvetica, sans-serif'
+    }
+    function monospace(){
+        thePage.style.fontFamily = 'monospace'
+        paras.style.fontFamily = 'monospace'
+
+    }
+
+    function small(){
+        thePage.style.fontSize = 'medium'
+        paras.style.fontSize = 'medium'
+    }
+
+    function medium(){
+        thePage.style.fontSize = 'large'
+        paras.style.fontSize = 'large'
+
+    }
+
+    function large(){
+        thePage.style.fontSize = 'x-large'
+        paras.style.fontSize = 'x-large'
+        
+
+    }
+
+    function showPopup(popup){
+        var popup = document.getElementById(popup)
+        popup.style.display = 'block'
+    }
+    function hidePopup(popup){
+        var popup = document.getElementById(popup)
+        popup.style.display = 'none'
+    }
+
+
+    function fontChanged() {
+        var selectElement = document.getElementById('fontFam');
+        var selectedValue = selectElement.value;
+        if (selectedValue === "Monospace") {
+            monospace();
+        }
+        else if (selectedValue === "Arial"){
+            arial();
+        }
+        else if (selectedValue === "Segoe"){
+            
+            segoe();
+        }
+    }
+
+    function fontSizeChanged() {
+        var selectElement = document.getElementById('fontSize');
+        var selectedValue = selectElement.value;
+        if (selectedValue === "small") {
+            small();
+        }
+        else if (selectedValue === "medium"){
+            medium();
+        }
+        else if (selectedValue === "large"){
+            large();
+        }
+    }
+
+</script>
+<link rel="stylesheet" href="sitemapstyle.css">
+<footer>
+        <p>Developed By<br>
+            <a id="myAbout" href="editorRamudi.html">Ramudi Munasinghe</a></p>
+        </footer>
+</body>
+</html>

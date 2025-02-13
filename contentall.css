@@ -1,0 +1,188 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-size: cover;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+nav {
+  background-color: rgb(8, 114, 114);
+  padding: 2px;
+  position: fixed;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  top: 0;
+  width: 90%;
+  height: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  opacity: 90%;
+  margin-top: 20px;
+}
+
+ 
+
+
+nav a {
+  font-weight: bold;
+
+  color: whitesmoke;
+  transition:  0.3s ease;
+  padding: 5px;
+  text-decoration:none;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  
+  padding: 0px;
+  text-align: center;
+}
+
+nav li {
+
+  display: inline-block;
+  margin: 30px;
+ 
+}
+
+nav ul li a:hover {
+  background-color: #4298ab;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+nav .logo img {
+  width: 130px;
+}
+
+header {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 60px;
+  color: black;
+  font-weight: 900;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.menu ul {
+  width: 50%;
+  padding-left: 27%;
+  padding-bottom: 80px;
+  
+ 
+
+}
+
+.menu li {
+  background-color: rgb(14, 195, 195);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  list-style-type: none;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.menu .menu2 {
+  background-color: rgb(8, 114, 114);
+ 
+}
+
+.menu {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+p {
+font-size: larger;
+  
+}
+
+h1 {
+
+}
+
+.container1 {
+  background-color: rgb(14, 195, 195);
+  color: white;
+  text-align: center;
+}
+
+.container1 img {
+  width: 85%;
+}
+
+.container2 img {
+  width: 85%;
+  
+}
+
+.container2 {
+  background-color: rgb(8, 114, 114);
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.image1 {
+  width: 40%;
+}
+.information{
+  width: 35%;
+}
+.information p{
+  text-align: left;
+}
+
+  
+
+
+
+.footer {
+  position: relative;
+  font-size: 15px;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  padding: 15px;
+  width: 100%;
+  margin: 0px;
+  background-color: rgb(0, 0, 0);
+  color: whitesmoke;
+  text-align: center;
+}
+
+.pageEditor {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.pageEditor:hover {
+  color: rgb(112, 158, 255);
+}
+
+a:link,
+a:visited,
+a:active {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+}

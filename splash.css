@@ -1,0 +1,52 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('bck.jpg');
+  background-size: 120%;
+  background-position: center;
+  width: auto;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1 {
+  color: whitesmoke;
+  font-family: 'monospace';
+
+  display: inline-block;
+ font-size: 30pt;
+}
+
+p {
+  color: whitesmoke;
+}
+
+ul {
+  color: whitesmoke;
+}
+
+.splash-screen img {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.splash-screen h2 {
+  font-family: Arial, sans-serif;
+  font-size: 48px;
+  color: antiquewhite;
+  text-transform: uppercase;
+  position: relative;
+}
+
+
+
+.image {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+}
+footer ul{
+padding-top: 8%;
+}

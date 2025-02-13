@@ -1,0 +1,78 @@
+
+  
+  #logo{/*styling logo*/
+  text-align: left;
+  width: 100%;
+  height: 90px;
+  }
+  #me:hover{
+    cursor: pointer;
+  }
+
+  
+  .heading { /*styling header*/
+      display: flex;
+      border: solid black;
+      background-color: rgb(139, 126, 146);
+  }
+  
+  line, polyline{
+      stroke: black;
+  }
+  
+ellipse, rect{
+    background-color: rgb(177, 177, 237);
+    color: beige;
+}
+
+  .heading .headingtext { /*heading text*/
+      color: darkblue;
+      padding: 20px;
+      font-size: 35px;
+  }
+  .headingtext{
+      margin-left: 40%;
+      margin-right: 40%;
+  }
+  /* #group6{
+      color: white;
+  } */
+  
+  svg { 
+
+      margin-top: 3%;   
+      color: white;
+      font-weight: bold;
+      position: fixed;
+      top: 40%;
+      right: -32%;
+      text-align: center;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      padding: 20px;
+      text-align: center;
+  }
+ 
+  
+  body {
+      background-image: url('images/map2.jpg');
+      background-size: cover;
+  }
+
+  
+  .ellipse {
+      fill:url(#grad1);
+      stroke:black;
+      stroke-width:3;
+  }
+  
+  footer {
+        position: fixed;
+        bottom: 0px;
+      text-align: center;
+      padding-left: 45%;
+      padding-right: 45%;
+      background-color: rgb(39, 189, 184);
+      color: white;
+  }
+  
